@@ -1,0 +1,44 @@
+<!doctype html >
+<html>
+<head>
+    <title>JS Tester</title>
+    <!-- Styling for the box elements -->
+    <style>.box{width:200px;height:100px;border:1px solid black}</style>
+</head>
+<body> 
+    <!-- Container to hold the box elements -->
+    <div class="container">
+        <!-- Box elements with unique IDs -->
+        <div class="box" id="box0">Box #1</div>
+        <div class="box" id="box1">Box #2</div>
+        <div class="box" id="box2">Box #3</div>
+        <div class="box" id="box3">Box #4</div>
+    </div> 
+    <!-- JavaScript code to track clicks on box elements -->
+    <script>      
+        // Array to store information about clicked elements
+        const counter = [];  
+        // Selecting the container element
+        const main = document.querySelector(".container");
+        // Adding a click event listener to the container
+        main.addEventListener("click", tracker);
+        // Function to track clicks on box elements
+        function tracker(e){
+            // Getting the clicked element
+            const el = e.target;
+            // Checking if the clicked element has an ID
+            if(el.id){
+                // Creating an object to store information about the clicked element
+                const temp = {};
+                temp.content = el.textContent; // Storing the text content of the element
+                temp.id = el.id; // Storing the ID of the element
+                temp.tagName = el.tagName; // Storing the tag name of the element
+                temp.class = el.className; // Storing the class name(s) of the element
+                console.dir(el); // Logging the clicked element to the console
+                counter.push(temp); // Adding the object to the counter array
+                console.log(counter); // Logging the counter array to the console
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+1.
+    0
+    3
+    6
+    9
+
+2.
+    0
+    5
+    1
+    6
+    2
+    7
+    [1, 5, 7]
+
+
+
+    // Define an array called myArray containing the values 1, 5, and 7.
+const myArray = [1, 5, 7];
+
+// Iterate over each element in myArray using a for...in loop, with 'el' representing the index of the current element.
+for (el in myArray) {
+    // Log the index converted to a number.
+    console.log(Number(el));
+
+    // Attempting to modify the loop variable 'el' won't affect the original array.
+    // Add 5 to the current element (the index 'el'), converting it to a number, and log the result.
+    el = Number(el) + 5;
+    console.log(el);
+}
+
+// Log the original array myArray, which remains unchanged by the loop.
+console.log(myArray);

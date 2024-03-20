@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.BODY {
+    padding: 20px;
+    max-width: 600px; /* Adjust this value as needed */
+    margin: 0 auto;
+}
+.PTitle {
+    text-align: center;
+}
+.LOGO {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+#detentionForm {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#detentionForm input,
+#detentionForm select,
+#detentionForm button {
+    display: block;
+    width: calc(100% - 20px); /* Adjust width to accommodate padding */
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#detentionForm select {
+    width: calc(100% + 2px); /* Adjust width to accommodate border */
+}
+#detentionForm button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+#detentionForm button:hover {
+    background-color: #45a049;
+}
+#detentionList {
+    list-style-type: none;
+    padding: 0;
+}
+#detentionList li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+#detentionList li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+#detentionList li button:hover {
+    background-color: #d32f2f;
+}
+@media screen and (max-width: 600px) {
+    #detentionForm input,
+    #detentionForm select,
+    #detentionForm button {
+        width: 100%;
+    }
+}

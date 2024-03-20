@@ -1,0 +1,27 @@
+1. 
+    class
+
+
+2. 
+    Using the following syntax:
+    class Person {
+    constructor(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    }
+    }
+
+
+3. 
+    Inheritance
+
+4. Answers:
+    • True
+    • False
+    • True
+    • True
+    • False
+
+
+5. 
+    B

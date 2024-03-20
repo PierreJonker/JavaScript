@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Click Me Game</title>
+    <!-- Styling for the output, box, and message elements -->
+    <style>
+        .output {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: auto;
+            text-align: center;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            top: 50px;
+            left: 20%;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .message {
+            text-align: center;
+            padding: 10px;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Output div to contain the game -->
+    <div class="output"></div>
+    <!-- Message div to display game messages -->
+    <div class="message"></div>
+    <script>
+        // Selecting the output and message elements
+        const output = document.querySelector('.output');
+        const message = document.querySelector('.message');
+        // Setting initial message
+        message.textContent = "Press to Start";
+        // Creating box element
+        const box = document.createElement('div');
+        // Object to manage game state and timer
+        const game = {
+            timer: 0,
+            start: null
+        };
+        // Adding box class to the box element
+        box.classList.add('box');
+        // Appending the box element to the output div
+        output.append(box);
+
+        // Event listener for box click
+        box.addEventListener('click', (e) => {
+            // Clearing box content and hiding it
+            box.textContent = "";
+            box.style.display = 'none';
+            // Setting timer for adding box randomly
+            game.timer = setTimeout(addBox, ranNum(3000));
+            // Updating message based on game state
+            if (!game.start) {
+                message.textContent = 'Loading....';
+            } else {
+                // Calculating duration since game start
+                const cur = new Date().getTime();
+                const dur = (cur - game.start) / 1000;
+                // Displaying duration message
+                message.textContent = `It took ${dur} seconds to click`;
+            }
+        });
+
+        // Function to add box at random position
+        function addBox() {
+            // Updating message
+            message.textContent = 'Click it...';
+            // Setting game start time
+            game.start = new Date().getTime();
+            // Displaying box and setting random position
+            box.style.display = 'block';
+            box.style.left = ranNum(450) + 'px';
+            box.style.top = ranNum(450) + 'px';
+        }
+
+        // Function to generate random number up to max
+        function ranNum(max) {
+            return Math.floor(Math.random() * max);
+        }
+    </script>
+
+</body>
+</html>

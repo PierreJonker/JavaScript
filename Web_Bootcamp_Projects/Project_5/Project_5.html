@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evergreen Heights Academy</title>
+    <link rel="stylesheet" href="Project_5.css">
+</head>
+<body>
+    <div class="BODY">
+        <h1 class="PTitle">Evergreen Heights Academy</h1>
+        <img src="Evergreen_Heights_Academy.png" class="LOGO" alt="Logo">
+        <form id="detentionForm">
+            <input type="text" id="detentionInput" placeholder="Enter name...">
+            <input type="number" id="detentionDays" placeholder="Days of detention">
+            <input type="text" id="parentInfo" placeholder="Parent's information">
+            <select id="reasonSelect">
+                <option value="Late for class">Late for class</option>
+                <option value="Skipping classes">Skipping classes</option>
+                <option value="Disruptive behavior">Disruptive behavior</option>
+                <option value="Incomplete homework">Incomplete homework</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="text" id="otherReason" placeholder="Other reason (if applicable)" style="display: none;">
+            <button type="submit">Add to Detention List</button>
+        </form>
+        <ul id="detentionList">
+            <!-- Detention list items will be added here -->
+        </ul>
+    </div>
+   <script src="Project_5.js"></script>
+</body>
+</html>

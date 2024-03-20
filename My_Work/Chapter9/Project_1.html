@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Your HTML content -->
+<div class="output"> <!-- Fix: Used double quotation marks for class attribute -->
+    <h1>Hello</h1>
+    <div>Test</div>
+    <ul>
+        <li id="one">One</li>
+        <li class="red">Two</li>
+    </ul>
+    <div>Test</div>
+</div>
+
+<script>
+    // Select the element with class "output"
+    const output = document.querySelector(".output");
+
+    // Select the unordered list within the ".output" div and assign it an id "mainList"
+    const mainList = output.querySelector("ul");
+    mainList.id = "mainList";
+
+    // Output the mainList to the console
+    console.log(mainList);
+
+    // Select all div elements
+    const eles = document.querySelectorAll("div");
+
+    // Loop through all div elements
+    for (let x = 0; x < eles.length; x++) {
+        // Output the tag name of each div element
+        console.log(eles[x].tagName);
+        
+        // Assign an id to each div element based on its index in the NodeList
+        eles[x].id = "id" + (x + 1);
+
+        // Check if the index is odd or even
+        if (x % 2) {
+            // If odd, set the text color to red
+            eles[x].style.color = "red";
+        } else {
+            // If even, set the text color to blue
+            eles[x].style.color = "blue";
+        }
+    }
+</script>
+
+</html>
