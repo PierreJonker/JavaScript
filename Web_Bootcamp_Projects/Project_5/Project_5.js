@@ -57,7 +57,7 @@ function removeName(index) {
 
 // Function to simulate sending an email notification to the parent
 function notifyParent(name, days, parentInfo, reason) {
-    const message = `Dear ${parentInfo},\n\nYour child ${name} has been assigned ${days} days of detention due to ${reason}.\n\nSincerely,\nEvergreen Heights Academy`;
+    const message = `Dear Parent ${parentInfo},\n\nYour child ${name} has been assigned ${days} days of detention due to ${reason}.\n\nSincerely,\nEvergreen Heights Academy`;
     alert(message); // Simulate email alert
 }
 
